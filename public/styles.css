@@ -1,0 +1,185 @@
+/* General Styles */
+body {
+    background-color: #0d0d0d;
+    color: #f5f5f5;
+    font-family: 'Minecraft', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Minecraft';
+    src: url('fonts/minecraft.ttf') format('truetype');
+}
+
+a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+.header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.header h1 {
+    font-size: 48px;
+    margin: 0;
+    color: #00aaff;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Status Section */
+.status-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.server-card {
+    background-color: #2a2a2a;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 280px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+.server-card:hover {
+    transform: translateY(-10px);
+}
+
+.server-card h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.server-card p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.status-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.status-online {
+    color: #00ff00;
+}
+
+.status-offline, .status-crashed {
+    color: #ff0000;
+}
+
+.status-restarting {
+    color: #ffaa00;
+}
+
+/* Chart Section */
+.chart-section {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.chart-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.chart-controls {
+    margin-bottom: 20px;
+}
+
+.chart-controls label, .chart-controls select, .chart-controls input, .chart-controls button {
+    font-size: 16px;
+    margin: 5px;
+    color: #f5f5f5;
+}
+
+.chart-controls input, .chart-controls select {
+    background-color: #1e1e1e;
+    border: 1px solid #555;
+    color: #f5f5f5;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.chart-controls button {
+    background-color: #00aaff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.chart-controls button:hover {
+    background-color: #0088cc;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1e1e1e;
+    padding: 10px;
+    text-align: center;
+    color: #888;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .logo {
+        width: 50px;
+        margin-right: 10px;
+    }
+
+    .server-card {
+        width: 90%;
+    }
+
+    .chart-section {
+        padding: 10px;
+    }
+}

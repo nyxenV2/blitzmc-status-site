@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BlitzMC Server Status</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="images/blitzmc_logo.png" type="image/png">
+    <!-- Meta Tags for Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="images/blitzmc_logo.png" alt="BlitzMC Logo" class="logo">
+            <h1>BlitzMC Server Status</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="status-section" id="status-section">
+            <!-- Server status cards will be inserted here -->
+        </section>
+
+        <section class="chart-section">
+            <h2>Server Uptime History</h2>
+            <div class="chart-controls">
+                <label for="server-select">Select Server:</label>
+                <select id="server-select"></select>
+
+                <label for="start-date">Start Date:</label>
+                <input type="datetime-local" id="start-date">
+
+                <label for="end-date">End Date:</label>
+                <input type="datetime-local" id="end-date">
+
+                <button id="load-chart">Load Chart</button>
+            </div>
+            <canvas id="uptimeChart" width="400" height="200"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 BlitzMC. All rights reserved.</p>
+    </footer>
+
+    <!-- Include Socket.io client library -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
